@@ -19,6 +19,7 @@
 .slides,
 .slide {
   height: 600px;
+  width: 100%;
   @include lg-md {
     width: 100%;
     height: 700px;
@@ -38,7 +39,6 @@
 }
 
 .slides {
-  width: 100%;
   position: relative;
   padding: 0px;
   margin: 0px;
@@ -50,24 +50,23 @@
 
   transition: opacity 1s;
   opacity: 0;
-  width: 100%;
   height: 100%;
   background-size: cover;
   background-position: 50% 50%;
   &:nth-of-type(1) {
-    background-image: url(/assets/img/fog1.jpg);
+    background-image: url(./assets/img/fog1.jpg);
   }
   &:nth-of-type(2) {
-    background-image: url(/assets/img/fog2.jpg);
+    background-image: url(./assets/img/fog2.jpg);
   }
   &:nth-of-type(3) {
-    background-image: url(/assets/img/fog3.jpg);
+    background-image: url(./assets/img/fog3.jpg);
   }
   &:nth-of-type(4) {
-    background-image: url(/assets/img/fog4.jpg);
+    background-image: url(./assets/img/fog4.jpg);
   }
   &:nth-of-type(5) {
-    background-image: url(/assets/img/fog5.jpg);
+    background-image: url(./assets/img/fog5.jpg);
   }
 }
 

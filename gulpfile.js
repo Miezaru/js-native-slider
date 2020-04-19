@@ -138,7 +138,7 @@ async function sync() {
 
 function watchFiles() {
   syncInit();
-  watch(PATH.scssFiles, series(scssDev, scssMin)); // При работе заменить scss -> scssDev
+  watch(PATH.scssFiles, series(scss, scssMin)); // При работе заменить scss -> scssDev
   watch(PATH.htmlFiles, sync);
   watch(PATH.jsFiles, sync);
 }

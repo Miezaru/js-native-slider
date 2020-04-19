@@ -1,0 +1,114 @@
+.controls {
+  display: none;
+
+  width: $gap * 8;
+
+  @include lg-md {
+    width: 100%;
+    text-align: center;
+  }
+  @include md-sm {
+    width: 100%;
+    text-align: center;
+  }
+  @include sm-xs {
+    width: 100%;
+    text-align: center;
+  }
+  @include xs-nn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.control-item {
+  font-family: $font-main;
+  color: $color-gray;
+
+  width: 100%;
+  height: $gap * 4;
+  margin-bottom: $gap;
+
+  border-radius: 0 20px 20px 0;
+  border: 0px;
+
+  background-color: #232526;
+
+  cursor: pointer;
+
+  &:first-of-type {
+    margin-top: $gap * 13;
+  }
+
+  &:last-of-type {
+    margin-bottom: $gap * 13;
+  }
+
+  &:hover {
+    color: $color-light;
+  }
+
+  @include lg-md {
+    font-size: 1.3rem;
+
+    border-radius: 0 0 20px 20px;
+
+    width: 200px;
+    margin: 0 20px 0 0;
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  @include md-sm {
+    font-size: 1.5rem;
+
+    border-radius: 0 0 20px 20px;
+
+    width: 200px;
+    margin: 0 20px 0 0;
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  @include sm-xs {
+    font-size: 1.8rem;
+
+    border-radius: 0 0 20px 20px;
+
+    width: 200px;
+    height: 80px;
+    margin: 0 20px 0 0;
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  @include xs-nn {
+    font-size: 4rem;
+
+    border-radius: 0;
+
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      border-radius: 0 0 20px 20px;
+      margin-bottom: 0;
+    }
+  }
+}

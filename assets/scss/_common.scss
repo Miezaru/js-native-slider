@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size;
+}
+
+body {
+  font-size: 1rem;
+  font-family: $font-main;
+  background: #414345;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin: 0 auto;
+  width: $wrapper;
+  height: 100vh;
+}
+
+h1 {
+  font-family: $font-header;
+  text-align: center;
+  font-size: 3.5rem;
+
+  & > a {
+    color: $color-gray;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-light;
+    }
+  }
+  @include md-sm {
+    font-size: 4.5rem;
+  }
+  @include sm-xs {
+    font-size: 5.5rem;
+  }
+  @include xs-nn {
+    font-size: 6.5rem;
+  }
+}

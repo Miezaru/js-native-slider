@@ -1,0 +1,142 @@
+.indicators {
+  display: none;
+
+  @include lg-md {
+    text-align: center;
+  }
+  @include md-sm {
+    text-align: center;
+  }
+  @include sm-xs {
+    text-align: center;
+  }
+  @include xs-nn {
+    text-align: center;
+  }
+}
+
+.indicator {
+  font-family: $font-main;
+  color: $color-gray;
+
+  width: 100%;
+  height: $gap * 4;
+  margin-bottom: $gap;
+
+  border-radius: 20px 0 0 20px;
+  border: 0px;
+
+  background-color: $color-accent;
+
+  cursor: pointer;
+
+  &:first-of-type {
+    margin-top: $gap * 8;
+  }
+
+  &:last-of-type {
+    margin-bottom: $gap * 8;
+  }
+
+  &:hover {
+    color: $color-light;
+  }
+
+  &.active {
+    background-image: linear-gradient(to right, $color-accent, $color-primary);
+    color: $color-light;
+    outline: none;
+
+    @include lg-md {
+      background-image: linear-gradient(
+        to bottom,
+        $color-accent,
+        $color-primary
+      );
+    }
+    @include md-sm {
+      background-image: linear-gradient(
+        to bottom,
+        $color-accent,
+        $color-primary
+      );
+    }
+    @include sm-xs {
+      background-image: linear-gradient(
+        to bottom,
+        $color-accent,
+        $color-primary
+      );
+    }
+    @include xs-nn {
+      background-image: linear-gradient(
+        to bottom,
+        $color-accent,
+        $color-primary
+      );
+    }
+  }
+  @include lg-md {
+    font-size: 1.1rem;
+
+    border-radius: 20px 20px 0 0;
+
+    width: 100px;
+    margin: 0 20px 0 0;
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  @include md-sm {
+    font-size: 1.3rem;
+
+    border-radius: 20px 20px 0 0;
+
+    width: 100px;
+    margin: 0 20px 0 0;
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  @include sm-xs {
+    font-size: 1.8rem;
+
+    border-radius: 20px 20px 0 0;
+
+    width: 200px;
+    height: 80px;
+    margin: 0 20px 0 0;
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @include xs-nn {
+    font-size: 3rem;
+
+    border-radius: 20px 20px 0 0;
+
+    width: 220px;
+    height: 120px;
+    margin: 0;
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

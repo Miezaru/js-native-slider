@@ -1,0 +1,77 @@
+.carousel {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  @include lg-md {
+    display: block;
+  }
+  @include md-sm {
+    display: block;
+  }
+  @include sm-xs {
+    display: block;
+  }
+  @include xs-nn {
+    display: block;
+  }
+}
+
+.slides,
+.slide {
+  height: 600px;
+  @include lg-md {
+    width: 100%;
+    height: 700px;
+  }
+  @include md-sm {
+    width: 100%;
+    height: 900px;
+  }
+  @include sm-xs {
+    width: 100%;
+    height: 1200px;
+  }
+  @include xs-nn {
+    width: 100%;
+    height: 1400px;
+  }
+}
+
+.slides {
+  width: 100%;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+.slide {
+  position: absolute;
+
+  transition: opacity 1s;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  &:nth-of-type(1) {
+    background-image: url(/assets/img/fog1.jpg);
+  }
+  &:nth-of-type(2) {
+    background-image: url(/assets/img/fog2.jpg);
+  }
+  &:nth-of-type(3) {
+    background-image: url(/assets/img/fog3.jpg);
+  }
+  &:nth-of-type(4) {
+    background-image: url(/assets/img/fog4.jpg);
+  }
+  &:nth-of-type(5) {
+    background-image: url(/assets/img/fog5.jpg);
+  }
+}
+
+.active {
+  opacity: 1;
+  z-index: 2;
+}

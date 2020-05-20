@@ -10,37 +10,38 @@ html {
 body {
   font-size: 1rem;
   font-family: reross-quadratic, sans-serif;
-  background: #414345;
+  background: #f3efe0;
 }
 
 .wrapper {
-  min-height: 100%;
   margin: 0 auto;
-  width: 1400px;
+  max-width: 1400px;
   height: 100vh;
+  width: 100vw;
 }
 
 h1 {
   font-family: alfarn, sans-serif;
   text-align: center;
   font-size: 3.5rem;
+  margin: 0 0 7.5px 0;
 }
 
 h1 > a {
-  color: #bfbfbf;
+  color: #cdb140;
   text-decoration: none;
 }
 
 h1 > a:hover {
-  color: #ffffff;
+  color: #a27035;
 }
 
 .carousel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 .slides,
@@ -51,13 +52,14 @@ h1 > a:hover {
 
 .slides {
   position: relative;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 
 .slide {
   position: absolute;
+  border: 5px solid #a27035;
   -webkit-transition: opacity 1s;
   -o-transition: opacity 1s;
   transition: opacity 1s;
@@ -94,19 +96,21 @@ h1 > a:hover {
 
 .controls {
   display: none;
-  width: 120px;
+  text-align: center;
+  width: 10%;
 }
 
 .control-item {
   font-family: reross-quadratic, sans-serif;
-  color: #bfbfbf;
+  color: #f3efe0;
   width: 100%;
   height: 60px;
   margin-bottom: 15px;
   border-radius: 0 20px 20px 0;
   border: 0px;
-  background-color: #232526;
+  background-color: #a27035;
   cursor: pointer;
+  outline: none;
 }
 
 .control-item:first-of-type {
@@ -118,23 +122,25 @@ h1 > a:hover {
 }
 
 .control-item:hover {
-  color: #ffffff;
+  color: #ddca7d;
 }
 
 .indicators {
   display: none;
+  text-align: center;
 }
 
 .indicator {
   font-family: reross-quadratic, sans-serif;
-  color: #bfbfbf;
+  color: #f3efe0;
   width: 100%;
   height: 60px;
   margin-bottom: 15px;
   border-radius: 20px 0 0 20px;
   border: 0px;
-  background-color: #232526;
+  background-color: #a27035;
   cursor: pointer;
+  outline: none;
 }
 
 .indicator:first-of-type {
@@ -146,34 +152,26 @@ h1 > a:hover {
 }
 
 .indicator:hover {
-  color: #ffffff;
+  color: #ddca7d;
 }
 
 .indicator.active {
-  background-image: -webkit-gradient(linear, left top, right top, from(#232526), to(#414345));
-  background-image: -o-linear-gradient(left, #232526, #414345);
-  background-image: linear-gradient(to right, #232526, #414345);
-  color: #ffffff;
+  background-image: -webkit-gradient(linear, left top, right top, from(#cba135), to(#a27035));
+  background-image: -o-linear-gradient(left, #cba135, #a27035);
+  background-image: linear-gradient(to right, #cba135, #a27035);
   outline: none;
 }
 
-@media (max-width: 1399.8px) and (min-width: 992px) {
+@media (max-width: 1399.8px) and (min-width: 0px) {
   .carousel {
     display: block;
   }
-  .slides,
-  .slide {
-    width: 100%;
-    height: 700px;
-  }
   .controls {
-    width: 100%;
-    text-align: center;
+    width: auto;
   }
   .control-item {
-    font-size: 1.3rem;
     border-radius: 0 0 20px 20px;
-    width: 200px;
+    width: 100px;
     margin: 0 20px 0 0;
   }
   .control-item:first-of-type {
@@ -182,16 +180,12 @@ h1 > a:hover {
   .control-item:last-of-type {
     margin-bottom: 0;
   }
-  .indicators {
-    text-align: center;
-  }
   .indicator.active {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#232526), to(#414345));
-    background-image: -o-linear-gradient(top, #232526, #414345);
-    background-image: linear-gradient(to bottom, #232526, #414345);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#cba135), to(#a27035));
+    background-image: -o-linear-gradient(top, #cba135, #a27035);
+    background-image: linear-gradient(to bottom, #cba135, #a27035);
   }
   .indicator {
-    font-size: 1.1rem;
     border-radius: 20px 20px 0 0;
     width: 100px;
     margin: 0 20px 0 0;
@@ -201,160 +195,86 @@ h1 > a:hover {
   }
   .indicator:last-of-type {
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 1399.8px) and (min-width: 992px) {
+  .control-item {
+    font-size: 1.3rem;
+  }
+  .indicator {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 991.8px) and (min-width: 0px) {
+  .slides,
+  .slide {
+    width: 100vw;
+    height: 70vh;
+  }
+  .slide {
+    border-width: 3px;
   }
 }
 
 @media (max-width: 991.8px) and (min-width: 768px) {
   h1 {
-    font-size: 4.5rem;
-  }
-  .carousel {
-    display: block;
-  }
-  .slides,
-  .slide {
-    width: 100%;
-    height: 900px;
-  }
-  .controls {
-    width: 100%;
-    text-align: center;
+    font-size: 4rem;
   }
   .control-item {
     font-size: 1.5rem;
-    border-radius: 0 0 20px 20px;
-    width: 200px;
-    margin: 0 20px 0 0;
-  }
-  .control-item:first-of-type {
-    margin-top: 0;
-  }
-  .control-item:last-of-type {
-    margin-bottom: 0;
-  }
-  .indicators {
-    text-align: center;
-  }
-  .indicator.active {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#232526), to(#414345));
-    background-image: -o-linear-gradient(top, #232526, #414345);
-    background-image: linear-gradient(to bottom, #232526, #414345);
   }
   .indicator {
     font-size: 1.3rem;
-    border-radius: 20px 20px 0 0;
-    width: 100px;
-    margin: 0 20px 0 0;
   }
-  .indicator:first-of-type {
-    margin-top: 0;
+}
+
+@media (max-width: 767.8px) and (min-width: 0px) {
+  h1 {
+    width: 100vw;
+    height: 5vh;
   }
-  .indicator:last-of-type {
-    margin-bottom: 0;
+  .controls {
+    width: 100vw;
+    height: 15vh;
+  }
+  .control-item {
+    font-size: 1.3rem;
+    border-radius: 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  .indicators {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .indicator {
+    font-size: 1.3rem;
+    width: 15%;
+    height: inherit;
+    margin: 0;
   }
 }
 
 @media (max-width: 767.8px) and (min-width: 576px) {
   h1 {
-    font-size: 5.5rem;
-  }
-  .carousel {
-    display: block;
-  }
-  .slides,
-  .slide {
-    width: 100%;
-    height: 1200px;
-  }
-  .controls {
-    width: 100%;
-    text-align: center;
-  }
-  .control-item {
-    font-size: 1.8rem;
-    border-radius: 0 0 20px 20px;
-    width: 200px;
-    height: 80px;
-    margin: 0 20px 0 0;
-  }
-  .control-item:first-of-type {
-    margin-top: 0;
-  }
-  .control-item:last-of-type {
-    margin-bottom: 0;
-  }
-  .indicators {
-    text-align: center;
-  }
-  .indicator.active {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#232526), to(#414345));
-    background-image: -o-linear-gradient(top, #232526, #414345);
-    background-image: linear-gradient(to bottom, #232526, #414345);
+    font-size: 2rem;
   }
   .indicator {
     font-size: 1.8rem;
-    border-radius: 20px 20px 0 0;
-    width: 200px;
-    height: 80px;
-    margin: 0 20px 0 0;
-  }
-  .indicator:first-of-type {
-    margin-top: 0;
-  }
-  .indicator:last-of-type {
-    margin-bottom: 0;
+    margin: 0 10px 0 0;
   }
 }
 
 @media (max-width: 575.8px) and (min-width: 0px) {
   h1 {
-    font-size: 6.5rem;
-  }
-  .carousel {
-    display: block;
-  }
-  .slides,
-  .slide {
-    width: 100%;
-    height: 1400px;
-  }
-  .controls {
-    width: 100%;
-    text-align: center;
-  }
-  .control-item {
-    font-size: 4rem;
-    border-radius: 0;
-    width: 100%;
-    height: 150px;
-    margin: 0;
-  }
-  .control-item:first-of-type {
-    margin-top: 0;
-  }
-  .control-item:last-of-type {
-    border-radius: 0 0 20px 20px;
-    margin-bottom: 0;
+    font-size: 1.6rem;
   }
   .indicators {
-    text-align: center;
-  }
-  .indicator.active {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#232526), to(#414345));
-    background-image: -o-linear-gradient(top, #232526, #414345);
-    background-image: linear-gradient(to bottom, #232526, #414345);
-  }
-  .indicator {
-    font-size: 3rem;
-    border-radius: 20px 20px 0 0;
-    width: 220px;
-    height: 120px;
-    margin: 0;
-  }
-  .indicator:first-of-type {
-    margin-top: 0;
-  }
-  .indicator:last-of-type {
-    margin-bottom: 0;
+    width: 100vw;
+    height: 5vh;
   }
 }

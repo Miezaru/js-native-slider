@@ -1,23 +1,20 @@
 .indicators {
   display: none;
+  text-align: center;
 
-  @include lg-md {
-    text-align: center;
-  }
-  @include md-sm {
-    text-align: center;
-  }
-  @include sm-xs {
-    text-align: center;
-  }
   @include xs-nn {
-    text-align: center;
+    width: 100vw;
+    height: 5vh;
+  }
+
+  @include sm-nn {
+    display: flex;
   }
 }
 
 .indicator {
   font-family: $font-main;
-  color: $color-gray;
+  color: $color-background;
 
   width: 100%;
   height: $gap * 4;
@@ -29,6 +26,7 @@
   background-color: $color-accent;
 
   cursor: pointer;
+  outline: none;
 
   &:first-of-type {
     margin-top: $gap * 8;
@@ -43,100 +41,43 @@
   }
 
   &.active {
-    background-image: linear-gradient(to right, $color-accent, $color-primary);
-    color: $color-light;
+    background-image: linear-gradient(to right, $color-dark, $color-accent);
     outline: none;
 
-    @include lg-md {
-      background-image: linear-gradient(
-        to bottom,
-        $color-accent,
-        $color-primary
-      );
+    @include lg-nn {
+      background-image: linear-gradient(to bottom, $color-dark, $color-accent);
     }
-    @include md-sm {
-      background-image: linear-gradient(
-        to bottom,
-        $color-accent,
-        $color-primary
-      );
+  }
+
+  @include lg-nn {
+    border-radius: 20px 20px 0 0;
+
+    width: 100px;
+    margin: 0 20px 0 0;
+    &:first-of-type {
+      margin-top: 0;
     }
-    @include sm-xs {
-      background-image: linear-gradient(
-        to bottom,
-        $color-accent,
-        $color-primary
-      );
-    }
-    @include xs-nn {
-      background-image: linear-gradient(
-        to bottom,
-        $color-accent,
-        $color-primary
-      );
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
   @include lg-md {
     font-size: 1.1rem;
-
-    border-radius: 20px 20px 0 0;
-
-    width: 100px;
-    margin: 0 20px 0 0;
-    &:first-of-type {
-      margin-top: 0;
-    }
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
   }
   @include md-sm {
     font-size: 1.3rem;
-
-    border-radius: 20px 20px 0 0;
-
-    width: 100px;
-    margin: 0 20px 0 0;
-    &:first-of-type {
-      margin-top: 0;
-    }
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
   }
   @include sm-xs {
     font-size: 1.8rem;
-
-    border-radius: 20px 20px 0 0;
-
-    width: 200px;
-    height: 80px;
-    margin: 0 20px 0 0;
-    &:first-of-type {
-      margin-top: 0;
-    }
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
+    margin: 0 10px 0 0;
   }
 
-  @include xs-nn {
-    font-size: 3rem;
+  @include sm-nn {
+    font-size: 1.3rem;
+    width: 15%;
+    height: inherit;
 
-    border-radius: 20px 20px 0 0;
-
-    width: 220px;
-    height: 120px;
     margin: 0;
-    &:first-of-type {
-      margin-top: 0;
-    }
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
   }
 }

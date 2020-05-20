@@ -1,6 +1,6 @@
 // Паттерн модуль слайдер
 
-(function () {
+(function (time) {
   let carousel = document.querySelector('#carousel');
   let slides = document.querySelectorAll('.slide');
   let controls = document.querySelector('.controls');
@@ -13,7 +13,7 @@
   let slideCount = slides.length;
   let isPlaying = true;
   let currentSlide = 0;
-  let slideInterval = 2000;
+  let slideInterval = time;
   let swipeStartX = null;
   let swipeEndX = null;
 
@@ -46,7 +46,7 @@
   const playSlideshow = () => {
     pauseButton.innerHTML = 'Pause';
     isPlaying = !isPlaying;
-    slideInterval = setInterval(nextSlide, 2000);
+    slideInterval = setInterval(nextSlide, slideInterval);
   };
 
   const clickPause = () => (isPlaying ? pauseSlideshow() : playSlideshow());
@@ -106,4 +106,4 @@
   };
 
   init();
-})();
+})(2000);

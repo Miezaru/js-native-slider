@@ -9,14 +9,14 @@ html {
 body {
   font-size: 1rem;
   font-family: $font-main;
-  background: #414345;
+  background: $color-background;
 }
 
 .wrapper {
-  min-height: 100%;
   margin: 0 auto;
-  width: $wrapper;
+  max-width: $wrapper;
   height: 100vh;
+  width: 100vw;
 }
 
 h1 {
@@ -24,21 +24,29 @@ h1 {
   text-align: center;
   font-size: 3.5rem;
 
+  margin: 0 0 $gap / 2 0;
+
   & > a {
-    color: $color-gray;
+    color: $color-darken;
     text-decoration: none;
 
     &:hover {
-      color: $color-light;
+      color: $color-accent;
     }
   }
   @include md-sm {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
+
+  @include sm-nn {
+    width: 100vw;
+    height: 5vh;
+  }
+
   @include sm-xs {
-    font-size: 5.5rem;
+    font-size: 2rem;
   }
   @include xs-nn {
-    font-size: 6.5rem;
+    font-size: 1.6rem;
   }
 }

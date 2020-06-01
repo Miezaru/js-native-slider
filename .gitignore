@@ -6,5 +6,5 @@ node_modules/
 .eslintignore
 .eslintrc
 .prettierrc
-gulpfile.jshint
+gulpfile.js
 yarn.lock

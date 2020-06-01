@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript</title>
-    <link rel="stylesheet" href="https://use.typekit.net/gje6ixf.css" />
-    <link rel="stylesheet" href="assets/css/style.min.css" />
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <h1>
-        <a href="#">Fog slider</a>
-      </h1>
-      <div id="carousel" class="carousel">
-        <div class="indicators">
-          <button class="indicator active" data-slide-to="0">1</button>
-          <button class="indicator" data-slide-to="1">2</button>
-          <button class="indicator" data-slide-to="2">3</button>
-          <button class="indicator" data-slide-to="3">4</button>
-          <button class="indicator" data-slide-to="4">5</button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript</title>
+  <link rel="stylesheet" href="https://use.typekit.net/gje6ixf.css" />
+  <link rel="stylesheet" href="assets/css/main.min.css" />
+</head>
 
-        <ul id="slides" class="slides">
-          <li class="slide active"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-        </ul>
-
-        <div class="controls">
-          <button class="control-item" id="pause">Pause</button>
-          <button class="control-item" id="previous">Previous</button>
-          <button class="control-item" id="next">Next</button>
-        </div>
+<body>
+  <div class="wrapper">
+    <h1>
+      <a href="#">Fog slider</a>
+    </h1>
+    <div id="carousel" class="carousel">
+      <div class="indicators">
+        <button class="indicator active" data-slide-to="0">1</button>
+        <button class="indicator" data-slide-to="1">2</button>
+        <button class="indicator" data-slide-to="2">3</button>
+        <button class="indicator" data-slide-to="3">4</button>
+        <button class="indicator" data-slide-to="4">5</button>
       </div>
-      <div class="description"></div>
-    </div>
 
-    <script src="assets/js/all.min.js"></script>
-  </body>
+      <ul id="slides" class="slides">
+        <li class="slide active"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+      </ul>
+
+      <div class="controls">
+        <button class="control-item" id="pause">Pause</button>
+        <button class="control-item" id="previous">Previous</button>
+        <button class="control-item" id="next">Next</button>
+      </div>
+    </div>
+    <div class="description"></div>
+  </div>
+
+  <script src="assets/js/all.min.js"></script>
+</body>
+
 </html>

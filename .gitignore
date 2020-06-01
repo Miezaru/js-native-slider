@@ -1,3 +1,10 @@
 # IntellijIdea files
 .idea/
 .DS_Store
+node_modules/
+.bashrc
+.eslintignore
+.eslintrc
+.prettierrc
+gulpfile.jshint
+yarn.lock

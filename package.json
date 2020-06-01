@@ -21,9 +21,7 @@
     "rename": "^1.0.4",
     "sort-css-media-queries": "^1.5.0"
   },
-  "dependencies": {
-    "node-uuid": "^1.4.8"
-  },
+  "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
